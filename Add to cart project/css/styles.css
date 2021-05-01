@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+html {
+sroll-behaviour: smooth;
+}
+
 body {
     color: var(--mainBlack);
     background-color: var(--mainWhite);
