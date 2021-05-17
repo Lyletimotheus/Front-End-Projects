@@ -28,6 +28,9 @@ body {
 ul {
     list-style-type: none;
 }
+input {
+    -webkit-appearance: none;
+}
 /*NAVIGATIONAL MENU*/
 .navbar {
     position: sticky;
