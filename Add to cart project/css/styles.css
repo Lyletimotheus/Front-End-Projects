@@ -17,7 +17,7 @@
 *,*::before,*::after { box-sizing: border-box; }
 
 html {
-sroll-behaviour: smooth;
+	sroll-behaviour: smooth;
 }
 
 body {
