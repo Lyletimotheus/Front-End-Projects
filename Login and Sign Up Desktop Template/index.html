@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login and Sign Up Desktop Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <main class="grid w-100">
+      <section>
+        <div class="bg-white" id="login-signup-container">
+          <!-- SIGN UP CONTAINER -->
+          <div class="h-100 form-container sign-up-container">
+            <form method="POST" class="grid h-100 px-3 bg-white text-center">
+              <h2 class="ft-semi-bold mb-0">Sign Up</h2>
+
+              <div class="my-1">
+                <a href="#" class="social-icon facebook-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon google-plus-icon"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social-icon linkedln-icon"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+
+              <small>or use your email for registration</small>
+
+              <div class="text-left">
+                <label for="sign-up-name" class="ft-14 ft-semi-bold">Email</label>
+                <input type="text" id="sign-up-name" placeholder="Enter in your name..." autocomplete="off" required />
+                <small class="error">Please make sure your name is entered in correctly.</small>
+              </div>
+
+              <div class="text-left">
+                <label for="sign-up-email" class="ft-14 ft-semi-bold">Email</label>
+                <input type="email" id="sign-up-email" placeholder="Enter in your email..." autocomplete="off" required />
+                <small class="error">Please make sure your email is entered in correctly.</small>
+              </div>
+
+              <div class="text-left">
+                <label for="sign-up-password" class="ft-14 ft-semi-bold">Password</label>
+                <input type="password" id="sign-up-password" placeholder="Enter in your password..." autocomplete="off" required />
+                <small class="error">Please make sure your password is entered in correctly.</small>
+              </div>
+
+              <div class="text-left">
+                <label for="sign-up-confirm-password" class="ft-14 ft-semi-bold">Confirm Password</label>
+                <input type="password" id="sign-up-confirm-password" placeholder="Confirm your password..." autocomplete="off" required />
+                <small class="error">Please make sure your password is entered in correctly.</small>
+              </div>
+
+              <button type="submit">Sign Up</button>
+            </form>
+          </div>
+
+          <!-- LOGIN CONTAINER -->
+          <div class="h-100 form-container login-container">
+            <form method="POST" class="grid h-100 px-3 bg-white text-center">
+              <h2 class="ft-semi-bold mb-0">Login</h2>
+
+              <div class="my-1">
+                <a href="#" class="social-icon facebook-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon google-plus-icon"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social-icon linkedln-icon"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+
+              <small>or use your account</small>
+
+              <div class="text-left">
+                <label for="login-email" class="ft-14 ft-semi-bold">Email</label>
+                <input type="email" id="login-email" placeholder="Enter in your email..." autocomplete="off" required />
+                <small class="error">Please make sure your email is entered in correctly.</small>
+              </div>
+
+              <div class="text-left">
+                <label for="login-password" class="ft-14 ft-semi-bold">Password</label>
+                <input type="password" id="login-password" placeholder="Enter in your password..." autocomplete="off" required />
+                <small class="error">Please make sure your password is entered in correctly.</small>
+              </div>
+
+              <button type="submit">Login</button>
+            </form>
+          </div>
+
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+              </div>
+
+              <div class="overlay-panel overlay-right">
+                <h1>Hello Friend!</h1>
+                <p>Enter your personal details and start your journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

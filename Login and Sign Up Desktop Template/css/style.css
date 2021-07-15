@@ -1,0 +1,290 @@
+/* 
+  START - RESET SCRIPT
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #f6f5f7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input,
+textarea {
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+input:not([type='submit']):focus {
+  background: #e0e0e059;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* 
+  END - RESET SCRIPT
+*/
+
+/* 
+  START - REUSEABLE CLASSES
+*/
+.grid {
+  display: grid;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+
+.ft-14 {
+  font-size: 14px;
+}
+.ft-semi-bold {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.px-3 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* 
+  END - REUSEABLE CLASSES
+*/
+main {
+  height: 100vh;
+  place-items: center;
+}
+
+#login-signup-container {
+  position: relative;
+  width: 768px;
+  max-width: 100%;
+  min-height: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  transition: all 600ms ease-in-out;
+}
+
+.login-container {
+  z-index: 2;
+}
+.sign-up-container {
+  z-index: 1;
+  opacity: 0;
+}
+
+.form-container form.grid {
+  place-items: center;
+  text-align: center;
+}
+
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  transition: all 350ms ease-in-out;
+}
+.social-icon.facebook-icon:hover {
+  background-color: #3a5794;
+  border: transparent;
+  color: #fff;
+}
+.social-icon.google-plus-icon:hover {
+  background-color: #db4a39;
+  border: transparent;
+  color: #fff;
+}
+.social-icon.linkedln-icon:hover {
+  background-color: #0a66c2;
+  border: transparent;
+  color: #fff;
+}
+
+.form-container .text-left {
+  width: 100%;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+/*  */
+
+input {
+  border: none;
+  padding: 12px 15px;
+  margin: 0.25rem 0;
+  background: #e0e0e0;
+  color: #000;
+  font-size: 14px;
+  width: 100%;
+  border: 2px solid transparent;
+}
+
+button {
+  cursor: pointer;
+  padding: 12px 45px;
+  border-radius: 2px;
+  border: 1px solid #000;
+  color: #000;
+  transition: transform 80ms ease-in;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* OVERLAYS */
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 100;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 600ms ease-in-out;
+}
+.overlay {
+  background: #2980b9;
+  background: -webkit-linear-gradient(to bottom, #6dd5fa, #2980b9);
+  background: linear-gradient(to bottom, #6dd5fa, #2980b9);
+
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 600ms ease-in-out;
+}
+
+.overlay-panel {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  transform: translateX(0);
+  transition: transform 600ms ease-in-out;
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0%);
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+button.ghost {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+/* ANIMATION */
+
+/* MOVE SIGN-IN TO RIGHT */
+.right-panel-active .login-container {
+  transform: translateX(100%);
+}
+
+/* MOVE OVERLAY TO LEFT */
+.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+/* BRING SIGN-UP OVER SIGN IN */
+.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* MOVE OVERLAY BACK TO RIGHT */
+.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.right-panel-active .overlay-left {
+  transform: translateX(0%);
+}
+
+.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.error {
+  font-size: 12px;
+  color: #f00;
+  display: none;
+}

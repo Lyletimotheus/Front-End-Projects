@@ -1,0 +1,81 @@
+/* 
+  START - RESET SCRIPT
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* 
+  END - RESET SCRIPT 
+*/
+
+/* 
+  START - REUSEABLE CLASSES 
+*/
+.grid {
+  display: grid;
+}
+
+.py-6 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+/* 
+  END - REUSEABLE CLASSES 
+*/
+
+/* 
+  START - CUSTOMIZABLE CLASSES 
+*/
+.max-two-grid {
+  grid-template-columns: 100%;
+  gap: 2rem;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .max-two-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+img.left-side {
+  transform: translate(-2rem, 0);
+  opacity: 0;
+  transition: all 750ms ease-in-out;
+}
+img.right-side {
+  transform: translate(2rem, 0);
+  opacity: 0;
+  transition: all 750ms ease-in-out;
+}
+/* 
+  END - CUSTOMIZABLE CLASSES 
+*/
+
+/* 
+  START - ANIMATION CLASSES 
+*/
+.fade-slide-in {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+/* 
+  END - ANIMATION CLASSES 
+*/
