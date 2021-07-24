@@ -1,22 +1,22 @@
 [
     {
-        "id": "1",
-        "firstname": "Liam",
+        "id": 1,
+        "firstName": "Liam",
         "lastName": "Hunter"
     },
     {
         "id": 2,
-        "firstname": "Jack",
+        "firstName": "Jack",
         "lastName": "Henry"
     },
     {
         "id": 3,
-        "firstname": "Alexadra",
+        "firstName": "Alexadra",
         "lastName": "Humprheys"
     },
     {
         "id": 4,
-        "firstname": "Trey",
+        "firstName": "Trey",
         "lastName": "Benson"
     }
 ]
